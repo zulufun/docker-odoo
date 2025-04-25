@@ -7,6 +7,8 @@ services:
     env_file: .env
     volumes:
       - ./volumes/db:/var/lib/postgresql/data/pgdata
+    ports:
+      - "5433:5432"               # ánh xạ port để pgAdmin và host có thể kết nối
     deploy:
       resources:
         limits:
@@ -36,3 +38,16 @@ services:
         reservations:
           cpus: "0.50"
           memory: "512M"
+
+  # pgadmin:
+  #   image: dpage/pgadmin4:7
+  #   restart: unless-stopped
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@domain.com
+  #     PGADMIN_DEFAULT_PASSWORD: secret
+  #   ports:
+  #     - "8081:80"                 # truy cập pgAdmin tại http://localhost:8081
+  #   volumes:
+  #     - ./volumes/pgadmin:/var/lib/pgadmin
+  #   depends_on:
+  #     - db

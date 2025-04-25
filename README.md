@@ -40,7 +40,7 @@ changeme
    - Name: `docker-postgres` (hoặc bất kỳ tên nào bạn thích)  
 4. **Tab Connection**:  
    - **Host name/address**: `localhost`  
-   - **Port**: `5432`  
+   - **Port**: `5433`  
    - **Username**: giá trị của `POSTGRES_USER` (ví dụ `odoo18`)  
    - **Password**: giá trị của `POSTGRES_PASSWORD` (ví dụ `odoo18`)  
    - **Maintenance database**: `your_db` (hoặc `postgres` nếu bạn chưa tạo DB riêng)  

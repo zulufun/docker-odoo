@@ -35,7 +35,7 @@ changeme
 ## Mở db
 ### 2. Mở pgAdmin và tạo Server mới  
 1. **Mở** pgAdmin trên máy (Windows/Mac/Linux).  
-2. **Chuột phải** lên “Servers” → **Create → Server…**  
+2. **Chuột phải** lên “Servers” → **add new server…**  
 3. **Tab General**:  
    - Name: `docker-postgres` (hoặc bất kỳ tên nào bạn thích)  
 4. **Tab Connection**:  

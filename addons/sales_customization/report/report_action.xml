@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="id_sales_customization" model="report.paperformat">
+            <field name="name">A4 - Sales Order Custom Report</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">20</field>
+            <field name="margin_bottom">20</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">10</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_report_sale_order" model="ir.actions.report">
+            <field name="name">Sales Order Custom</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.report_sales_order</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_performa_invoice" model="ir.actions.report">
+            <field name="name">Performa Invoice</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.report_performa_invoice</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="sales_customization.id_sales_customization"/>
+            
+        </record>
+
+        <record id="action_report_performa_invoice2" model="ir.actions.report">
+            <field name="name">Financial Invoice</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.report_performa_invoice2</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        
+
+        <record id="action_report_order_sheet" model="ir.actions.report">
+            <field name="name">Order Sheet</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.report_order_sheet</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_commercial_invoice_report" model="ir.actions.report">
+            <field name="name">Commercial Invoice</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.commercial_invoice_report</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_packaging_list" model="ir.actions.report">
+            <field name="name">Packaging List</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.packaging_list</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_commercial_invoice_report1" model="ir.actions.report">
+            <field name="name">Export Order</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.commercial_invoice_report1</field> <!-- Matches t-name -->
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- bl instruction -->
+
+        <record id="action_bl_instruction" model="ir.actions.report">
+            <field name="name">BL instructions</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.bl_instruction</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- custom invoice -->
+
+        <record id="action_custom_invoice" model="ir.actions.report">
+            <field name="name">Custom Invoice</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sales_customization.custom_invoice</field> 
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        
+    </data>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="view_order_form_inherit" model="ir.ui.view">
+    <field name="name">sale.order.form.inherit</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_id']" position="after">
+            <!-- <field name="customer_vat" readonly="1"/>
+            <field name="address"/> -->
+            <field name="container_no" />
+            <field name="container_cbm" />
+            <field name="validity" />
+            <field name="total_gross_weight" />
+            <field name="total_net_weight" />
+        </xpath>
+
+        <xpath expr="//field[@name='delivery_status']" position="after">
+            <!-- <field name="delivery_date" /> -->
+            <field name="destination" />
+            <field name="delivery" />
+            <field name="fda" />
+            <field name="terms" />
+            <field name="language_instructions" />
+            <field name="lot_code" />
+            <field name="producer_code" />
+            <field name="fi_number" />
+            <field name="fi_date" />
+            <field name="container_no" />
+            <field name="container_cbm" />
+            <field name="bl_no" />
+            <field name="bl_date" />
+            <field name="vessel_voyage" />
+            <field name="loading_port" />
+            <field name="port_of_discharge" />
+            <field name="vessel" />
+            <field name="voyage" />   
+        </xpath>
+
+        <xpath expr="//field[@name='tax_totals']" position="before">
+            <field name="freight" />
+            <field name="total_qty" />
+            <field name="discount" />
+            <field name="total" />
+        </xpath>
+
+        
+    </field>
+</record>
+
+</odoo>

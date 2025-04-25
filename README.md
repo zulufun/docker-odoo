@@ -22,13 +22,13 @@ odoo -d {db_name (setup lúc khởi chạy lần đầu)} -u {tên module} --sto
 ```bash
 odoo -d {db_name (setup lúc khởi chạy lần đầu)} -i {tên module} --stop-after-init
 ```
-##Reset: nếu muốn reset lại tất cả thì phải 
+## Reset: nếu muốn reset lại tất cả thì phải 
 ```bash
 docker-compose down -v
 ```
 sau đó xóa folder volumes
 rồi up lại sẽ hoạt động như ban đầu
-##master-pass lúc setup database là
+#### master-pass lúc setup database là
 ```bash 
 changeme
 ```

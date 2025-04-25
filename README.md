@@ -27,7 +27,7 @@ docker-compose down -v
 ```
 sau đó xóa folder volumes
 rồi up lại sẽ hoạt động như ban đầu
-master-pass lúc setup database là
+##master-pass lúc setup database là
 ```bash 
 changeme
 ```

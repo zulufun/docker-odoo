@@ -1,4 +1,8 @@
-1. ##### Clone source code về  -> sau đó: 
+1. ##### Clone source code về  -> sau đó : 
+```bash
+cd {tên thư mục}
+```
+
 ```bash
 docker-compose pull
 ```

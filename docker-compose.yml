@@ -9,14 +9,7 @@ services:
       - ./volumes/db:/var/lib/postgresql/data/pgdata
     ports:
       - "5433:5432"               # ánh xạ port để pgAdmin và host có thể kết nối
-    deploy:
-      resources:
-        limits:
-          cpus: "0.50"
-          memory: "512M"
-        reservations:
-          cpus: "0.25"
-          memory: "256M"
+
 
   odoo:
     image: odoo:16.0
@@ -30,14 +23,7 @@ services:
       - ./volumes/odoo:/var/lib/odoo
       - ./addons:/mnt/extra-addons
       - ./odoo.conf:/etc/odoo/odoo.conf:ro
-    deploy:
-      resources:
-        limits:
-          cpus: "1.00"
-          memory: "1G"
-        reservations:
-          cpus: "0.50"
-          memory: "512M"
+
 
   # pgadmin:
   #   image: dpage/pgadmin4:7

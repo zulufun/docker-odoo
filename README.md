@@ -1,3 +1,4 @@
+## Hướng dẫn cài đặt
 1. ##### Clone source code về  -> sau đó khởi động docker : 
 ```bash
 cd {tên thư mục}
@@ -12,7 +13,7 @@ docker-compose up -d
 ```
 3. ##### Nếu muốn thêm module thì thêm vào thư mục addons module sẽ tự mount vào: 
 
-## Muốn update module mới thì exec vào service odoo đang chạy và chạy terminal -> trong docker desktop có phần exec terminal
+## Update: Muốn update module mới thì exec vào service odoo đang chạy và chạy terminal -> trong docker desktop có phần exec terminal
 update
 ```bash
 odoo -d {db_name (setup lúc khởi chạy lần đầu)} -u {tên module} --stop-after-init
@@ -21,7 +22,7 @@ odoo -d {db_name (setup lúc khởi chạy lần đầu)} -u {tên module} --sto
 ```bash
 odoo -d {db_name (setup lúc khởi chạy lần đầu)} -i {tên module} --stop-after-init
 ```
-####nếu muốn reset lại tất cả thì phải 
+##Reset: nếu muốn reset lại tất cả thì phải 
 ```bash
 docker-compose down -v
 ```

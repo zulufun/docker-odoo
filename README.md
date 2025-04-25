@@ -1,4 +1,4 @@
-1. ##### Clone source code về  -> sau đó : 
+1. ##### Clone source code về  -> sau đó khởi động docker : 
 ```bash
 cd {tên thư mục}
 ```
@@ -6,7 +6,7 @@ cd {tên thư mục}
 ```bash
 docker-compose pull
 ```
-2. ##### Khởi động docker -> sau đó: 
+2. #####  -> sau đó: 
 ```bash
 docker-compose up -d
 ```

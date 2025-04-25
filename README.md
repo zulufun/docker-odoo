@@ -10,9 +10,13 @@ docker-compose up -d
 
 ## Muốn update module mới thì exec vào service odoo đang chạy và chạy terminal -> trong docker desktop có phần exec terminal
 update
+```bash
 odoo -d {db_name (setup lúc khởi chạy lần đầu)} -u customer_metrics --stop-after-init
+```
 ##install
+```bash
 odoo -d {db_name (setup lúc khởi chạy lần đầu)} -i customer_metrics --stop-after-init
+```
 ####nếu muốn reset lại tất cả thì phải 
 ```bash
 docker-compose down -v

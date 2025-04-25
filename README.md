@@ -1,0 +1,3 @@
+clone source code về
+git clone ....
+Khởi động docker

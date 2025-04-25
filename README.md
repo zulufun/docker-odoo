@@ -41,7 +41,7 @@ changeme
 4. **Tab Connection**:  
    - **Host name/address**: `localhost`  
    - **Port**: `5433`  
-   - **Username**: giá trị của `POSTGRES_USER` (ví dụ `odoo18`)  
-   - **Password**: giá trị của `POSTGRES_PASSWORD` (ví dụ `odoo18`)  
-   - **Maintenance database**: `your_db` (hoặc `postgres` nếu bạn chưa tạo DB riêng)  
+   - **Username**: giá trị của `POSTGRES_USER` (ví dụ `odoo18`)  - ở trong odoo.conf
+   - **Password**: giá trị của `POSTGRES_PASSWORD` (ví dụ `odoo18`)  - ở trong odoo.conf
+   - **Maintenance database**: `your_db` (hoặc `postgres` nếu bạn chưa tạo DB riêng)  -> cái này tạo lúc mở odoo ban đầu
 5. **Save** để kết nối ngay lập tức. :contentReference[oaicite:2]{index=2}

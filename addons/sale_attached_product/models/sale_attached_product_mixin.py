@@ -1,12 +1,7 @@
-# Copyright 2022 Tecnativa - David Vidal
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-
 from odoo import api, models
-
-
 class SaleAttachedProductMixin(models.AbstractModel):
     _name = "sale.attached.product.mixin"
-    _description = "Mixin class for sale attached product features"
+    _description = "Lớp Mixin để bán kèm theo các tính năng sản phẩm đính kèm"
 
     @api.model
     def _get_auto_refresh_attached_product_triggers(self) -> set:

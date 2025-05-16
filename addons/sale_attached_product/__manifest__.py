@@ -1,15 +1,13 @@
-# Copyright 2022 Tecnativa - David Vidal
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+
 {
-    "name": "Attached products in sales",
-    "summary": "Define products that will be added automatically when adding another "
-    "in a sales order",
+    "name": "Đính kèm sản phẩm",
+    "summary": "Xác dịnh sản phẩm đính kèm cho đơn hàng",
     "version": "16.0.1.0.0",
     "development_status": "Beta",
     "category": "Sale",
-    "website": "https://github.com/OCA/sale-workflow",
-    "author": "Tecnativa, Odoo Community Association (OCA)",
-    "maintainers": ["chienandalu"],
+    "website": "https://github.com/zulufun/docker-odoo",
+    "author": "Đỗ Đức Phúc - MMT&TTDL -k56 - MTA",
+    "maintainers": ["zulu"],
     "license": "AGPL-3",
     "depends": ["sale"],
     "data": ["views/product_template_views.xml"],

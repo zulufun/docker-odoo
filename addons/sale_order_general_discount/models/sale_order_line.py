@@ -1,8 +1,4 @@
-# Copyright 2018 Tecnativa - Sergio Teruel
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 from odoo import api, models
-
-
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
@@ -10,10 +6,9 @@ class SaleOrderLine(models.Model):
     def _compute_discount(self):
         res = super()._compute_discount()
         for line in self:
-            # We check the value of general_discount on origin too to cover
-            # the case where a discount was set to a value != 0 and then
-            # set again to 0 to remove the discount on all the lines at the same
-            # time
+            # kiểm tra giá trị của general_discount trên origin để bao gồm
+            # trường hợp chiết khấu được đặt thành giá trị != 0 và sau đó
+            # đặt lại thành 0 để xóa chiết khấu trên tất cả các dòng cùng một lúc
             if line.order_id.general_discount or line.order_id._origin.general_discount:
                 line.discount = line.order_id.general_discount
         return res
